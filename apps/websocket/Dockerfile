@@ -30,7 +30,9 @@ RUN DATABASE_URL="postgresql://dummy:dummy@localhost:5432/dummy" npx prisma gene
 
 # Build the NestJS websocket application
 # Need to build from evoque-api workspace, not root workspace
+# Create symlink so Nx can resolve plugins from root node_modules
 WORKDIR /app/evoque-api
+RUN ln -s /app/node_modules ./node_modules || true
 RUN npx nx build websocket
 
 # Production image
