@@ -1,5 +1,5 @@
-# Use Node.js 18 LTS
-FROM node:18-alpine AS base
+# Use Node.js 22
+FROM node:22-alpine AS base
 
 # Install dependencies only when needed
 FROM base AS deps
