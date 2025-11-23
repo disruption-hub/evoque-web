@@ -126,7 +126,7 @@ function AdminLayoutInner({
   );
 }
 
-export default function AdminLayout({
+export default function AdminLayoutClient({
   children,
 }: {
   children: React.ReactNode;
