@@ -1,7 +1,7 @@
 {
-  "buildCommand": "cd ../.. && npm install --legacy-peer-deps && ./node_modules/.bin/nx build evoque-web --skip-nx-cache",
+  "buildCommand": "sh -c 'cd ../.. && npm install --legacy-peer-deps && npx nx build evoque-web --skip-nx-cache'",
   "outputDirectory": "../../dist/apps/evoque-web/.next",
-  "installCommand": "cd ../.. && npm install --legacy-peer-deps",
+  "installCommand": "sh -c 'cd ../.. && npm install --legacy-peer-deps'",
   "framework": "nextjs",
   "env": {
     "NODE_ENV": "production"
