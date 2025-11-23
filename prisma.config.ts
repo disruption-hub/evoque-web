@@ -14,8 +14,9 @@ export default defineConfig({
 
   // The database URL
   datasource: {
-    // Type Safe env() helper
-    // Does not replace the need for dotenv
-    url: env('DATABASE_URL'),
+    // For generate: dummy URL is fine (not actually connecting)
+    // For runtime: actual DATABASE_URL will be provided by environment
+    // Using process.env directly with fallback for build-time generation
+    url: process.env.DATABASE_URL || 'postgresql://dummy:dummy@localhost:5432/dummy',
   },
 });

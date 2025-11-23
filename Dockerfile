@@ -22,7 +22,9 @@ COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
 # Generate Prisma Client before build
-RUN npx prisma generate
+# DATABASE_URL is required by prisma.config.ts but not needed for generation
+# Using a dummy URL just to satisfy the config validation
+RUN DATABASE_URL="postgresql://dummy:dummy@localhost:5432/dummy" npx prisma generate
 
 # Build the NestJS application
 RUN npx nx build evoque-api
