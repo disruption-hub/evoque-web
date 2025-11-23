@@ -1,6 +1,6 @@
 {
   "name": "evoque-web",
-  "buildCommand": "NODE_ENV=development npm install --legacy-peer-deps && npx nx build evoque-web --skip-nx-cache",
+  "buildCommand": "npm run build:vercel",
   "outputDirectory": "dist/apps/evoque-web/.next",
   "installCommand": "NODE_ENV=development npm install --legacy-peer-deps",
   "framework": "nextjs"

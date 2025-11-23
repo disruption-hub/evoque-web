@@ -2,7 +2,9 @@
   "name": "@evoque-api/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build:vercel": "npx nx build evoque-web --skip-nx-cache"
+  },
   "private": true,
   "dependencies": {
     "@aws-sdk/client-s3": "^3.937.0",
