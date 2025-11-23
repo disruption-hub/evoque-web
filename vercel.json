@@ -1,7 +1,11 @@
 {
+  "name": "evoque-web",
   "buildCommand": "npm install --legacy-peer-deps && npx nx build evoque-web --skip-nx-cache",
   "outputDirectory": "dist/apps/evoque-web/.next",
   "installCommand": "npm install --legacy-peer-deps",
   "framework": "nextjs",
-  "rootDirectory": "evoque-api"
+  "ignoreCommand": "git diff --quiet HEAD^ HEAD ./",
+  "env": {
+    "NODE_ENV": "production"
+  }
 }

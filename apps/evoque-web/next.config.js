@@ -11,6 +11,12 @@ const nextConfig = {
   // Use this to set Nx-specific options
   // See: https://nx.dev/recipes/next/next-config-setup
   nx: {},
+  // Vercel optimizations
+  output: 'standalone',
+  // Ensure proper environment variable handling
+  env: {
+    NODE_ENV: process.env.NODE_ENV || 'production',
+  },
 };
 
 const plugins = [
