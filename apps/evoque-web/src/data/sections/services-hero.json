@@ -1,0 +1,14 @@
+{
+  "id": "services-hero",
+  "sectionKey": "services-hero",
+  "title": "Our Services",
+  "type": "HERO",
+  "sectionData": {
+    "title": "Our Services",
+    "description": "Discover the comprehensive business process outsourcing services offered by E-Voque.",
+    "content": "# Our Services\n\nDiscover the comprehensive business process outsourcing services offered by E-Voque.\n\n"
+  },
+  "order": 0,
+  "isActive": true
+}
+

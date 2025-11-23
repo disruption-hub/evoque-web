@@ -1,0 +1,36 @@
+{
+  "id": "about-values",
+  "sectionKey": "about-values",
+  "title": "Our Values",
+  "type": "VALUES",
+  "sectionData": {
+    "title": "Our Values",
+    "backgroundImage": "/api/v1/media/download?key=1763655621832-8uqx6ibzaco-dce319e7-0200-4b2a-9202-48d93077b603.mp4&view=true",
+    "values": [
+      {
+        "icon": "Building2",
+        "title": "Excellence",
+        "description": "We strive for the highest quality in everything we do"
+      },
+      {
+        "icon": "Target",
+        "title": "Innovation",
+        "description": "We leverage cutting-edge technology to solve business challenges"
+      },
+      {
+        "icon": "Eye",
+        "title": "Integrity",
+        "description": "We build trust through transparency and ethical practices"
+      },
+      {
+        "icon": "Heart",
+        "title": "Commitment",
+        "description": "We are dedicated to our clients' success"
+      }
+    ],
+    "content": "# Our Values\n\nOur core values guide everything we do and shape how we work with our clients and each other.\n\n## Excellence\n\nWe strive for the highest quality in everything we do. From our recruitment process to our service delivery, excellence is our standard.\n\n## Innovation\n\nWe leverage cutting-edge technology to solve business challenges. Our commitment to innovation ensures we stay ahead of industry trends and provide the best solutions.\n\n## Integrity\n\nWe build trust through transparency and ethical practices. Our clients can rely on us to be honest, accountable, and ethical in all our interactions.\n\n## Commitment\n\nWe are dedicated to our clients' success. Our team goes above and beyond to ensure we deliver results that exceed expectations."
+  },
+  "order": 3,
+  "isActive": true
+}
+

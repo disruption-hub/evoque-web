@@ -1,0 +1,18 @@
+{
+  "id": "evoque-location-mdx",
+  "sectionKey": "location",
+  "title": "Our Location",
+  "type": "LOCATION",
+  "sectionData": {
+    "title": "Our Location",
+    "location": "Our headquarters and facilities are located in **Lima, Peru**.",
+    "facilityTitle": "Our Facility",
+    "facilityDescription": "e-voque is a powerful state-of-the-art facility that makes possible any combination of inbound, outbound or automated activities over a secure network environment.",
+    "image": "/peru-location.jpg",
+    "imageAlt": "Lima, Peru - Our Location",
+    "content": "# Our Location\n\nOur headquarters and facilities are located in **Lima, Peru**.\n\n## Our Facility\n\ne-voque is a powerful state-of-the-art facility that makes possible any combination of inbound, outbound or automated activities over a secure network environment.\n\n## Strategic Location\n\nLima, Peru offers:\n\n- Excellent infrastructure\n- Reliable telecommunications\n- Skilled workforce\n- Strategic time zone alignment\n- Business-friendly environment"
+  },
+  "order": 0,
+  "isActive": true
+}
+

@@ -8,19 +8,22 @@ coverage
 .nyc_output
 
 # Evoque API main app (separate service)
-../evoque-api/apps/evoque-api/**
+evoque-api/apps/evoque-api/**
 
 # Evoque API E2E tests
-../evoque-api/apps/evoque-api-e2e/**
+evoque-api/apps/evoque-api-e2e/**
 
 # Web app (separate service)
-../evoque-api/apps/evoque-web/**
+evoque-api/apps/evoque-web/**
 
 # Web app E2E tests
-../evoque-api/apps/evoque-web-e2e/**
+evoque-api/apps/evoque-web-e2e/**
 
-# Web app at root (if exists)
-../apps/evoque-web/**
+# Nuo app (separate service)
+apps/nuo/**
+
+# Other apps at root (if any)
+apps/**
 
 # Only watch websocket related files
 # This service should only deploy when websocket changes

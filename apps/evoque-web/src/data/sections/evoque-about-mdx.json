@@ -1,0 +1,18 @@
+{
+  "id": "evoque-about-mdx",
+  "sectionKey": "about",
+  "title": "About E-Voque",
+  "type": "ABOUT",
+  "sectionData": {
+    "title": "About E-Voque",
+    "description": "We are a business process and marketing services outsourcing that combines skilled professionals, industry knowledge and advanced technology to help our clients create profitable relationships with their customers. *Our headquarters and facilities are located in Lima, Peru.*",
+    "backgroundImage": {
+      "mobile": "/api/v1/media/download?key=home-videos%2F1763760668091-ohiribl058c-video-2-compressed.mp4&view=true",
+      "desktop": "/api/v1/media/download?key=home-videos%2F1763770661112-fhd45lln5v-about-desktop.mp4&view=true"
+    },
+    "content": "# About E-Voque\n\nWe are a business process and marketing services outsourcing that combines skilled professionals, industry knowledge and advanced technology to help our clients create profitable relationships with their customers.\n\n*Our headquarters and facilities are located in Lima, Peru.*"
+  },
+  "order": 1,
+  "isActive": true
+}
+

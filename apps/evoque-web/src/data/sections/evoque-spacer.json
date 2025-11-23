@@ -1,0 +1,10 @@
+{
+  "id": "evoque-spacer",
+  "sectionKey": "spacer",
+  "title": "Spacer",
+  "type": "SPACER",
+  "sectionData": {},
+  "order": 1.5,
+  "isActive": true
+}
+

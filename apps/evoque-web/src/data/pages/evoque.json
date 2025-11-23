@@ -1,0 +1,25 @@
+{
+  "id": "page-evoque",
+  "slug": "",
+  "title": "E-Voque Corporate Brochure",
+  "description": "E-Voque - Beyond interpretation. Business process and marketing services outsourcing.",
+  "sections": [
+    "evoque-hero-mdx",
+    "evoque-about-mdx",
+    "evoque-beyond-standards-mdx",
+    "evoque-solutions-mdx",
+    "evoque-hr-mdx",
+    "evoque-why-peru-mdx",
+    "evoque-we-know-our-people-mdx",
+    "evoque-opportunities-mdx",
+    "evoque-training-mdx",
+    "evoque-advantage-mdx",
+    "evoque-contact-mdx"
+  ],
+  "menuSections": [
+    "header-1",
+    "footer-1"
+  ],
+  "isActive": true
+}
+

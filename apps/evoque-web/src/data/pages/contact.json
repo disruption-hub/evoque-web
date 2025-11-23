@@ -1,0 +1,15 @@
+{
+  "id": "page-contact",
+  "slug": "contact",
+  "title": "Contact Us",
+  "description": "Get in touch with E-Voque to discuss how we can help your business.",
+  "sections": [
+    "contact-page-mdx"
+  ],
+  "menuSections": [
+    "header-1",
+    "footer-1"
+  ],
+  "isActive": true
+}
+

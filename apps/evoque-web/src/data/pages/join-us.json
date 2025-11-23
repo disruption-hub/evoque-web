@@ -1,0 +1,15 @@
+{
+  "id": "page-join-us",
+  "slug": "join-us",
+  "title": "Join Our Team",
+  "description": "Explore career opportunities at E-Voque and join our growing team.",
+  "sections": [
+    "join-us-form"
+  ],
+  "menuSections": [
+    "header-1",
+    "footer-1"
+  ],
+  "isActive": true
+}
+

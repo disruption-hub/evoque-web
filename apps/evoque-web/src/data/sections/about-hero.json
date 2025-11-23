@@ -1,0 +1,14 @@
+{
+  "id": "about-hero",
+  "sectionKey": "about-hero",
+  "title": "About E-Voque",
+  "type": "HERO",
+  "sectionData": {
+    "title": "About E-Voque",
+    "description": "We are a business process and marketing services outsourcing company that combines skilled professionals, industry knowledge and advanced technology to help our clients create profitable relationships with their customers.",
+    "content": "# About E-Voque\n\nWe are a business process and marketing services outsourcing company that combines skilled professionals, industry knowledge and advanced technology to help our clients create profitable relationships with their customers."
+  },
+  "order": 0,
+  "isActive": true
+}
+

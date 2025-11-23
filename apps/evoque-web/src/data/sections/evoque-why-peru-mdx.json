@@ -1,0 +1,16 @@
+{
+  "id": "evoque-why-peru-mdx",
+  "sectionKey": "peru-mdx",
+  "title": "Why Peru?",
+  "type": "WHY_PERU",
+  "sectionData": {
+    "title": "Why Peru?",
+    "content": "Peru and Colombia were carefully chosen because of its friendly, english-speaking population. With strong American cultural influences and reliable telecommunications.\n\nPeru is one of the fastest-growing country in South America. Strategic geographical location. Same time zone as United States and Latin America. Strong cultural affinity with North America.\n\nReliable telecommunications infrastructure.",
+    "image": "/api/v1/media/download?key=Peru%2F1763765536792-b70czniwjyt-why-peru.jpeg&view=true",
+    "imageAlt": "Lima, Peru",
+    "markdownContent": "# Why Peru?\n\nPeru and Colombia were carefully chosen because of its friendly, english-speaking population. With strong American cultural influences and reliable telecommunications.\n\nPeru is one of the fastest-growing country in South America. Strategic geographical location.\n\nSame time zone as United States and Latin America. Strong cultural affinity with North America.\n\nReliable telecommunications infrastructure."
+  },
+  "order": 4,
+  "isActive": true
+}
+

@@ -1,0 +1,69 @@
+{
+  "id": "footer-1",
+  "type": "FOOTER",
+  "name": "Main Footer",
+  "content": {
+    "linkGroups": [
+      {
+        "links": [
+          {
+            "id": "link-1",
+            "label": "Home",
+            "url": "/",
+            "order": 0,
+            "isActive": true,
+            "isExternal": false
+          },
+          {
+            "id": "link-2",
+            "label": "About",
+            "url": "/about",
+            "order": 1,
+            "isActive": true,
+            "isExternal": false
+          },
+          {
+            "id": "link-3",
+            "label": "Services",
+            "url": "/services",
+            "order": 2,
+            "isActive": true,
+            "isExternal": false
+          },
+          {
+            "id": "link-4",
+            "label": "Contact",
+            "url": "/contact",
+            "order": 3,
+            "isActive": true,
+            "isExternal": false
+          }
+        ]
+      },
+      {
+        "links": [
+          {
+            "id": "link-5",
+            "label": "Join Us",
+            "url": "/join-us",
+            "order": 0,
+            "isActive": true,
+            "isExternal": false
+          },
+          {
+            "id": "link-6",
+            "label": "Sign In",
+            "url": "/sign-in",
+            "order": 1,
+            "isActive": true,
+            "isExternal": false
+          }
+        ]
+      }
+    ],
+    "content": "© 2024 E-Voque Web. All rights reserved."
+  },
+  "order": 0,
+  "isActive": true
+}
+

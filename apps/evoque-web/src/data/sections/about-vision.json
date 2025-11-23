@@ -1,0 +1,15 @@
+{
+  "id": "about-vision",
+  "sectionKey": "about-vision",
+  "title": "Our Vision",
+  "type": "VISION",
+  "sectionData": {
+    "title": "Our Vision",
+    "description": "To be the leading business process outsourcing partner in Latin America, recognized for excellence, innovation, and client success.",
+    "backgroundImage": "/api/v1/media/download?key=1763655621832-8uqx6ibzaco-dce319e7-0200-4b2a-9202-48d93077b603.mp4&view=true",
+    "content": "# Our Vision\n\nTo be the leading business process outsourcing partner in Latin America, recognized for excellence, innovation, and client success.\n\n## Looking Forward\n\nWe envision a future where E-Voque is the go-to partner for businesses seeking exceptional outsourcing solutions. Through our commitment to excellence, innovation, and client success, we aim to transform the outsourcing landscape in Latin America."
+  },
+  "order": 2,
+  "isActive": true
+}
+

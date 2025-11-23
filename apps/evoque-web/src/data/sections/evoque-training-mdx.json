@@ -1,0 +1,22 @@
+{
+  "id": "evoque-training-mdx",
+  "sectionKey": "training-mdx",
+  "title": "Trained to be The Best",
+  "type": "TRAINING",
+  "sectionData": {
+    "title": "Trained to be The Best",
+    "bullets": [
+      "Every one of our agents go through a exhaustive training program where they learn vital skills to provide quality customer experience at every stage of our customer lifecycle",
+      "We also educate our agents on how to be well-rounded professionals, teaching them skills that will help them exceed in their respective fields",
+      "Customer service excellence",
+      "Communication skills",
+      "Problem-solving techniques",
+      "Industry-specific knowledge",
+      "Professional development"
+    ],
+    "content": "# Trained to be The Best\n\nEvery one of our agents go through a exhaustive training program where they learn vital skills to provide quality customer experience at every stage of our customer lifecycle.\n\nWe also educate our agents on how to be well-rounded professionals, teaching them skills that will help them exceed in their respective fields. Customer service excellence. Communication skills. Problem-solving techniques. Industry-specific knowledge. Professional development."
+  },
+  "order": 6,
+  "isActive": true
+}
+

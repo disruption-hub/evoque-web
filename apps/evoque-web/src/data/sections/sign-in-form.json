@@ -1,0 +1,18 @@
+{
+  "id": "sign-in-form",
+  "sectionKey": "sign-in-form",
+  "title": "Sign In",
+  "type": "FORM",
+  "sectionData": {
+    "title": "Sign In",
+    "description": "Enter your credentials to access your account.",
+    "formType": "signin",
+    "layout": "horizontal",
+    "formPosition": "left",
+    "heroTitle": "Sign In",
+    "heroDescription": "Sign in to your E-Voque client portal account."
+  },
+  "order": 0,
+  "isActive": true
+}
+

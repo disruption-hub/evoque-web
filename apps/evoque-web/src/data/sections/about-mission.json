@@ -1,0 +1,15 @@
+{
+  "id": "about-mission",
+  "sectionKey": "about-mission",
+  "title": "Our Mission",
+  "type": "MISSION",
+  "sectionData": {
+    "title": "Our Mission",
+    "description": "To deliver exceptional outsourcing solutions that drive business growth and customer satisfaction through innovative technology and dedicated expertise.",
+    "backgroundImage": "/api/v1/media/download?key=1763655621832-8uqx6ibzaco-dce319e7-0200-4b2a-9202-48d93077b603.mp4&view=true",
+    "content": "# Our Mission\n\nTo deliver exceptional outsourcing solutions that drive business growth and customer satisfaction through innovative technology and dedicated expertise.\n\n## Our Commitment\n\nWe are dedicated to providing our clients with the highest quality outsourcing services, leveraging cutting-edge technology and a team of experienced professionals to achieve outstanding results."
+  },
+  "order": 1,
+  "isActive": true
+}
+

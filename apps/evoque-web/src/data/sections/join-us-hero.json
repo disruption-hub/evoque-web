@@ -1,0 +1,14 @@
+{
+  "id": "join-us-hero",
+  "sectionKey": "join-us-hero",
+  "title": "Join Our Team",
+  "type": "HERO",
+  "sectionData": {
+    "title": "Join Our Team",
+    "description": "Explore career opportunities at E-Voque and join our growing team.",
+    "content": "# Join Our Team\n\nExplore career opportunities at E-Voque and join our growing team.\n\n"
+  },
+  "order": 0,
+  "isActive": true
+}
+

@@ -1,0 +1,15 @@
+{
+  "id": "evoque-we-know-our-people-mdx",
+  "sectionKey": "we-know-our-people-mdx",
+  "title": "We know our people",
+  "type": "WE_KNOW_OUR_PEOPLE",
+  "sectionData": {
+    "title": "We know our people",
+    "backgroundImage": "/api/v1/media/download?key=1763655621832-8uqx6ibzaco-dce319e7-0200-4b2a-9202-48d93077b603.mp4&view=true",
+    "content": "Reaching Hispanics with their own idiosyncrasies and in their own cultural environment has been shown to make a big difference.\n\nThat is why being part of the Hispanic community give us the ability to understand them, making us the ideal link between American companies and this powerful emerging market.",
+    "markdownContent": "# We know our people\n\nReaching Hispanics with their own idiosyncrasies and in their own cultural environment has been shown to make a big difference.\n\nThat is why being part of the Hispanic community give us the ability to understand them, making us the ideal link between American companies and this powerful emerging market.\n\n"
+  },
+  "order": 5,
+  "isActive": true
+}
+

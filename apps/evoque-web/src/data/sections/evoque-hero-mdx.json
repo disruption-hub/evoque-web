@@ -1,0 +1,20 @@
+{
+  "id": "evoque-hero-mdx",
+  "sectionKey": "hero",
+  "title": "Hero Section",
+  "type": "HERO",
+  "sectionData": {
+    "subtitle": "Corporate Brochure",
+    "title": "Beyond interpretation",
+    "description": "E-Voque delivers exceptional business process and marketing services outsourcing solutions that help our clients create profitable relationships with their customers.",
+    "backgroundImage": "/api/v1/media/download?key=1763417393255-x9ojttr7vtr-7bf12fc2-a60d-4647-9cda-683f4f0410d0.MP4&view=true",
+    "ctaText": "Get Started",
+    "ctaLink": "#contact",
+    "secondaryCtaText": "Learn More",
+    "secondaryCtaLink": "#about",
+    "content": "# Beyond interpretation\n\nE-Voque delivers exceptional business process and marketing services outsourcing solutions that help our clients create profitable relationships with their customers.\n\n## Corporate Brochure\n\nDiscover how E-Voque can transform your business operations and help you build stronger customer relationships."
+  },
+  "order": 0,
+  "isActive": true
+}
+

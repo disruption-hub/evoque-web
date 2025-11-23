@@ -1,0 +1,16 @@
+{
+  "id": "page-services",
+  "slug": "services",
+  "title": "Our Services",
+  "description": "Discover the comprehensive business process outsourcing services offered by E-Voque.",
+  "sections": [
+    "services-hero",
+    "evoque-solutions-mdx"
+  ],
+  "menuSections": [
+    "header-1",
+    "footer-1"
+  ],
+  "isActive": true
+}
+

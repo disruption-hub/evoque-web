@@ -1,0 +1,14 @@
+{
+  "id": "sign-in-hero",
+  "sectionKey": "sign-in-hero",
+  "title": "Sign In",
+  "type": "HERO",
+  "sectionData": {
+    "title": "Sign In",
+    "description": "Sign in to your E-Voque client portal account.",
+    "content": "# Sign In\n\nSign in to your E-Voque client portal account.\n\n"
+  },
+  "order": 0,
+  "isActive": true
+}
+

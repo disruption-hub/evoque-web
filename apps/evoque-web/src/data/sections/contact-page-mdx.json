@@ -1,0 +1,21 @@
+{
+  "id": "contact-page-mdx",
+  "sectionKey": "contact-page",
+  "title": "Contact Us",
+  "type": "CONTACT",
+  "sectionData": {
+    "title": "Contact Us",
+    "description": "Get in touch with us to learn how E-Voque can help transform your business operations.",
+    "address": "Lima, Perú",
+    "addressDescription": "Our headquarters and facilities are located in the heart of Lima, providing easy access and excellent infrastructure.",
+    "email": "info@e-voque.com",
+    "website": "http://www.e-voque.com",
+    "ctaText": "Get in Touch",
+    "ctaLink": "mailto:info@e-voque.com",
+    "ctaDescription": "Ready to take your business to the next level? Contact us today to discuss how we can help you achieve your goals.",
+    "content": "# Contact Us\n\nGet in touch with us to learn how E-Voque can help transform your business operations.\n\n## Ready to Get Started?\n\nReady to take your business to the next level? Contact us today to discuss how we can help you achieve your goals.\n\n## Our Headquarters\n\nOur headquarters and facilities are located in the heart of Lima, providing easy access and excellent infrastructure.\n\n## How to Reach Us\n\n- **Email:** info@e-voque.com\n- **Website:** http://www.e-voque.com\n- **Location:** Lima, Perú\n\nWe're here to help you succeed. Reach out to us today!"
+  },
+  "order": 0,
+  "isActive": true
+}
+

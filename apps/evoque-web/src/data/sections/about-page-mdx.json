@@ -1,0 +1,14 @@
+{
+  "id": "about-page-mdx",
+  "sectionKey": "about-page",
+  "title": "About E-Voque",
+  "type": "ABOUT",
+  "sectionData": {
+    "title": "About E-Voque",
+    "description": "We are a business process and marketing services outsourcing that combines **skilled professionals**, **industry knowledge** and **advanced technology** to help our clients create profitable relationships with their customers.",
+    "content": "# About E-Voque\n\nWe are a business process and marketing services outsourcing that combines **skilled professionals**, **industry knowledge** and **advanced technology** to help our clients create profitable relationships with their customers.\n\n## Who We Are\n\nE-Voque is a leading provider of business process and marketing services outsourcing solutions. We specialize in helping companies create profitable relationships with their customers through a unique combination of skilled professionals, industry knowledge, and advanced technology.\n\n## Our Approach\n\nWe believe in building long-term partnerships with our clients, understanding their unique needs, and delivering customized solutions that drive real business results."
+  },
+  "order": 0,
+  "isActive": true
+}
+

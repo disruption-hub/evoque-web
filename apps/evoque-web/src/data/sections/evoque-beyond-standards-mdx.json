@@ -1,0 +1,15 @@
+{
+  "id": "evoque-beyond-standards-mdx",
+  "sectionKey": "beyond-standards",
+  "title": "Beyond Standards",
+  "type": "BEYOND_STANDARDS",
+  "sectionData": {
+    "title": "Beyond Standards",
+    "description": "e-voque is a powerful state-of-the-art facility that makes possible any combination of inbound, outbound or automated activities over a secure network environment.",
+    "backgroundImage": "/api/v1/media/download?key=1763655621832-8uqx6ibzaco-dce319e7-0200-4b2a-9202-48d93077b603.mp4&view=true",
+    "content": "# Beyond Standards\n\ne-voque is a powerful state-of-the-art facility that makes possible any combination of inbound, outbound or automated activities over a secure network environment.\n\n"
+  },
+  "order": 2,
+  "isActive": true
+}
+

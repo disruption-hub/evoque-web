@@ -1,0 +1,31 @@
+{
+  "id": "evoque-opportunities-mdx",
+  "sectionKey": "opportunities",
+  "title": "Opportunities",
+  "type": "OPPORTUNITIES_FEATURES",
+  "sectionData": {
+    "title": "Opportunities",
+    "features": [
+      {
+        "description": "Strategic geographical location and same time zone in relation to the most important offshore markets, such as the United States and Latin America.",
+        "image": "/api/v1/media/download?key=Opportunities%20Section%2F1763764578738-7flu818vnwq-op-1.jpeg&view=true"
+      },
+      {
+        "description": "Greater cultural affinity with North America in relation to the rest of the countries of the world.",
+        "image": "/api/v1/media/download?key=Opportunities%20Section%2F1763764928303-hfjkddr2ll6-op-2.jpeg&view=true"
+      },
+      {
+        "description": "Installed capacity available, with growth potential in the short and medium term.",
+        "image": "/api/v1/media/download?key=Opportunities%20Section%2F1763764578764-2dxy1ljqa9j-op-3.jpeg&view=true"
+      },
+      {
+        "description": "We have the greatest business acumen compared to the rest of competing countries.",
+        "image": "/api/v1/media/download?key=Opportunities%20Section%2F1763764578685-zvkba2a2eph-op-4.jpeg&view=true"
+      }
+    ],
+    "content": "# Opportunities\n\nDiscover the unique opportunities that E-Voque offers for your business.\n\nStrategic geographical location and same time zone in relation to the most important offshore markets, such as the United States and Latin America.\n\nGreater cultural affinity with North America in relation to the rest of the countries of the world.\n\nInstalled capacity available, with growth potential in the short and medium term.\n\nWe have the greatest business acumen compared to the rest of competing countries."
+  },
+  "order": 5,
+  "isActive": true
+}
+

@@ -1,0 +1,19 @@
+{
+  "id": "page-about",
+  "slug": "about",
+  "title": "About E-Voque",
+  "description": "Learn more about E-Voque, our mission, vision, and values.",
+  "sections": [
+    "about-hero",
+    "evoque-about-mdx",
+    "about-mission",
+    "about-vision",
+    "about-values"
+  ],
+  "menuSections": [
+    "header-1",
+    "footer-1"
+  ],
+  "isActive": true
+}
+

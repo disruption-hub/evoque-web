@@ -16,7 +16,9 @@
     "baseUrl": ".",
     "paths": {
       "@generated/prisma": ["generated/prisma"],
-      "@generated/prisma/*": ["generated/prisma/*"]
+      "@generated/prisma/*": ["generated/prisma/*"],
+      "@evoque/prisma": ["generated/prisma"],
+      "@evoque/prisma/*": ["generated/prisma/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]

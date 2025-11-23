@@ -1,0 +1,21 @@
+{
+  "id": "header-1",
+  "type": "HEADER",
+  "name": "Main Header",
+  "content": {
+    "logo": "/logo-evoque.png",
+    "logoAlt": "E-Voque Logo",
+    "menuId": "main-menu",
+    "links": [
+      { "label": "Home", "url": "/", "isExternal": false },
+      { "label": "About", "url": "/about", "isExternal": false },
+      { "label": "Services", "url": "/services", "isExternal": false },
+      { "label": "Contact", "url": "/contact", "isExternal": false },
+      { "label": "Join Us", "url": "/join-us", "isExternal": false },
+      { "label": "Sign In", "url": "/sign-in", "isExternal": false }
+    ]
+  },
+  "order": 0,
+  "isActive": true
+}
+

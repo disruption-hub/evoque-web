@@ -1,0 +1,21 @@
+{
+  "id": "evoque-solutions-mdx",
+  "sectionKey": "solutions",
+  "title": "Solutions",
+  "type": "SOLUTIONS_LIST",
+  "sectionData": {
+    "title": "Solutions",
+    "description": "We offer comprehensive business process outsourcing services tailored to your needs.",
+    "content": "## Customer Engagement\n\n- Customer service\n- Language interpretation\n\n## Support Services\n\n- Email/Chat response\n- Claims Services\n\n## Winback Services\n\n- Loyalty Programs\n- Satisfaction Surveys",
+    "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=800&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=800&fit=crop",
+      "/api/v1/media/download?key=Solutions%20Section%2F1763764606148-sufc5tf4vs-solutions-2.jpeg&view=true",
+      "/api/v1/media/download?key=Solutions%20Section%2F1763764606190-h7ksglem2tc-solutions-3.jpeg&view=true"
+    ],
+    "imageAlt": "Solutions"
+  },
+  "order": 3,
+  "isActive": true
+}
+

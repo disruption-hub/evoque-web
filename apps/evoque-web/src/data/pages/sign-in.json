@@ -1,0 +1,15 @@
+{
+  "id": "page-sign-in",
+  "slug": "sign-in",
+  "title": "Sign In",
+  "description": "Sign in to your E-Voque client portal account.",
+  "sections": [
+    "sign-in-form"
+  ],
+  "menuSections": [
+    "header-1",
+    "footer-1"
+  ],
+  "isActive": true
+}
+

@@ -1,0 +1,17 @@
+{
+  "id": "join-us-form",
+  "sectionKey": "join-us-form",
+  "title": "Join Our Team",
+  "type": "FORM",
+  "sectionData": {
+    "title": "Apply Now",
+    "description": "Fill out the form below to submit your application.",
+    "formType": "joinus",
+    "layout": "horizontal",
+    "heroTitle": "Join Our Team",
+    "heroDescription": "Explore career opportunities at E-Voque and join our growing team."
+  },
+  "order": 0,
+  "isActive": true
+}
+

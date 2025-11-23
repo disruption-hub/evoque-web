@@ -3,9 +3,54 @@
 ## Setup
 
 1. Connect your repository to Railway
-2. **CRITICAL**: Set the **Root Directory** to the monorepo root (`/`) - NOT `websocket/`
-3. Set the **Dockerfile Path** to `websocket/Dockerfile` (NOT `apps/websocket/Dockerfile`)
+2. **CRITICAL**: Set the **Root Directory** to the monorepo root (`/`) - NOT `evoque-api/apps/websocket/`
+3. Set the **Dockerfile Path** to `evoque-api/apps/websocket/Dockerfile`
 4. Configure environment variables (see below)
+
+## Railway Deployment Checklist
+
+### Step 1: Create New Service
+- [ ] Go to Railway dashboard
+- [ ] Click "New Project" or "New Service"
+- [ ] Select "GitHub Repo" and choose your repository
+- [ ] Service will not auto-detect (this is expected - websocket is nested too deep)
+
+### Step 2: Configure Service Settings
+- [ ] **Root Directory**: Set to `/` (monorepo root)
+- [ ] **Dockerfile Path**: Set to `evoque-api/apps/websocket/Dockerfile`
+- [ ] **Service Name**: Set to `websocket` (or your preferred name)
+
+### Step 3: Configure Watch Paths
+- [ ] Go to Service Settings → Deploy → Watch Paths
+- [ ] Add the following paths (one per line):
+  - `evoque-api/apps/websocket/**`
+  - `evoque-api/prisma/**`
+  - `evoque-api/prisma.config.ts`
+  - `evoque-api/generated/**`
+  - `package.json`
+  - `nx.json`
+  - `tsconfig.base.json`
+  - `evoque-api/apps/websocket/Dockerfile`
+  - `evoque-api/apps/websocket/railway.json`
+
+### Step 4: Configure Environment Variables
+- [ ] `DATABASE_URL` - PostgreSQL connection string (required)
+- [ ] `JWT_SECRET` - JWT secret for authentication (required)
+- [ ] `PUSHER_APP_ID` - Pusher application ID (required)
+- [ ] `PUSHER_KEY` - Pusher key (required)
+- [ ] `PUSHER_SECRET` - Pusher secret (required)
+- [ ] `PUSHER_CLUSTER` - Pusher cluster (required)
+- [ ] `ALLOWED_ORIGINS` - Comma-separated CORS origins (optional, defaults to `http://localhost:3000`)
+- [ ] `PORT` - Automatically set by Railway (do not set manually)
+
+### Step 5: Deploy and Verify
+- [ ] Trigger initial deployment
+- [ ] Check build logs for successful Prisma Client generation
+- [ ] Check build logs for successful `nx build websocket`
+- [ ] Verify service starts successfully
+- [ ] Check logs for: `🚀 WebSocket Pusher API is running on: http://localhost:${PORT}/api`
+- [ ] Test health endpoint (if available)
+- [ ] Verify Pusher authentication endpoint is accessible
 
 ## Configure Watch Paths
 
@@ -16,19 +61,19 @@ To prevent deployments when unrelated files change, configure **Watch Paths** in
 3. Add the following watch paths (relative to repository root):
 
    ```
-   websocket/**
+   evoque-api/apps/websocket/**
    evoque-api/prisma/**
    evoque-api/prisma.config.ts
    evoque-api/generated/**
    package.json
    nx.json
    tsconfig.base.json
-   websocket/Dockerfile
-   websocket/railway.json
+   evoque-api/apps/websocket/Dockerfile
+   evoque-api/apps/websocket/railway.json
    ```
 
 This ensures the `websocket` service only deploys when:
-- Files in `websocket/` change
+- Files in `evoque-api/apps/websocket/` change
 - Prisma schema or config changes (needed for Prisma Client generation)
 - Root configuration files change
 - Dockerfile or railway.json changes
@@ -68,11 +113,11 @@ Required environment variables:
 
 **Solution**: 
 - Set Root Directory to `/` (monorepo root)
-- Set Dockerfile Path to `websocket/Dockerfile`
+- Set Dockerfile Path to `evoque-api/apps/websocket/Dockerfile`
 
 ### Issue: "Build fails with 'evoque-api' not found"
 
-**Cause**: Railway root directory is set to `websocket/` instead of `/`.
+**Cause**: Railway root directory is set incorrectly (e.g., `evoque-api/apps/websocket/` instead of `/`).
 
 **Solution**: Set Root Directory to `/` (monorepo root) so the Dockerfile can access `evoque-api/` directory.
 

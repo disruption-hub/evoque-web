@@ -1,0 +1,52 @@
+{
+  "id": "services-page-mdx",
+  "sectionKey": "services-page",
+  "title": "Our Services",
+  "type": "SERVICES",
+  "sectionData": {
+    "title": "Our Services",
+    "description": "Discover the comprehensive business process outsourcing services offered by E-Voque.",
+    "content": "# Our Services\n\nDiscover the comprehensive business process outsourcing services offered by E-Voque.\n\n",
+    "services": [
+      {
+        "icon": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=400&h=400&fit=crop",
+        "title": "Language Interpretation",
+        "description": "Scale up your language interpretation teams with our agile over the phone and video solutions.",
+        "href": "/services"
+      },
+      {
+        "icon": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=400&h=400&fit=crop",
+        "title": "Sales",
+        "description": "Add tremendous growth to your company. Our trained sales agents will use the right data and approach to bring additional revenue to partners.",
+        "href": "/services"
+      },
+      {
+        "icon": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=400&fit=crop",
+        "title": "Customer Services",
+        "description": "We can foster quality communication and customer support that will keep your customers coming back.",
+        "href": "/services"
+      },
+      {
+        "icon": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&h=400&fit=crop",
+        "title": "Billing",
+        "description": "Make accurate and faster billing processes with clients. Regardless of the model, we will support you through all parts of the billing cycle.",
+        "href": "/services"
+      },
+      {
+        "icon": "https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=400&h=400&fit=crop",
+        "title": "Collections Services",
+        "description": "Outsourcing your collections services is a viable cost-cutting measure without compromising on the efficacy factor. It is far cheaper than internal collections as you do not have to maintain payroll, printing/ mailing costs and other petty expenses. We are a multilingual Contact Center with experienced agents for effective collections and recoveries.",
+        "href": "/services"
+      },
+      {
+        "icon": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=400&fit=crop",
+        "title": "Help Desk",
+        "description": "At E-Voque, we know that your time is valuable and so are your customers. We can be standing by to handle help desk questions from basic to complex so that you and your employees can spend your time making more customers. We offer different levels of help desk services, depending on your business needs.",
+        "href": "/services"
+      }
+    ]
+  },
+  "order": 1,
+  "isActive": true
+}
+

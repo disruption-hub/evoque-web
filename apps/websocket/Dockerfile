@@ -29,7 +29,8 @@ WORKDIR /app/evoque-api
 RUN DATABASE_URL="postgresql://dummy:dummy@localhost:5432/dummy" npx prisma generate
 
 # Build the NestJS websocket application
-WORKDIR /app
+# Need to build from evoque-api workspace, not root workspace
+WORKDIR /app/evoque-api
 RUN npx nx build websocket
 
 # Production image
@@ -55,8 +56,8 @@ RUN npm install --omit=dev --no-save \
 # Copy generated Prisma client (needed at runtime)
 COPY --from=builder /app/evoque-api/generated ./evoque-api/generated
 
-# Copy built application
-COPY --from=builder /app/dist/apps/websocket ./dist/apps/websocket
+# Copy built application (built from evoque-api workspace, so output is in evoque-api/dist)
+COPY --from=builder /app/evoque-api/dist/apps/websocket ./dist/apps/websocket
 
 # Install production dependencies from the built package.json
 WORKDIR /app/dist/apps/websocket

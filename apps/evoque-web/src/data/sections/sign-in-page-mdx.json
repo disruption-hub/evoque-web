@@ -1,0 +1,13 @@
+{
+  "id": "sign-in-page-mdx",
+  "sectionKey": "sign-in-page",
+  "title": "Sign In",
+  "type": "ABOUT",
+  "sectionData": {
+    "title": "Sign In",
+    "content": "# Sign In\n\nWelcome back! Please sign in to access your account.\n\n<SignInForm />\n\n## Client Portal\n\nAccess your dashboard, reports, and account information through our secure client portal.\n\n## Features\n\n- **Real-time Analytics** - Monitor your operations in real-time\n- **Performance Reports** - Access detailed performance metrics\n- **Account Management** - Update your account settings and preferences\n- **Support Tickets** - Submit and track support requests\n\n## Need Help?\n\nIf you're having trouble signing in, please contact our support team at **support@e-voque.com** or call us at **+51 1 XXX XXXX**.\n\n## New Client?\n\nDon't have an account yet? [Contact us](/contact) to get started with E-Voque services.\n\n"
+  },
+  "order": 0,
+  "isActive": true
+}
+
