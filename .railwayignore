@@ -1,0 +1,9 @@
+node_modules
+.git
+.github
+*.log
+.DS_Store
+coverage
+.nyc_output
+dist/apps/evoque-api-e2e
+

@@ -6,16 +6,11 @@
   "tags": [],
   "targets": {
     "build": {
-      "executor": "nx:run-commands",
+      "executor": "@nx/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
       "options": {
-        "command": "webpack-cli build",
-        "args": ["--node-env=production"],
-        "cwd": "apps/evoque-api"
-      },
-      "configurations": {
-        "development": {
-          "args": ["--node-env=development"]
-        }
+        "outputPath": "dist/apps/evoque-api",
+        "webpackConfig": "apps/evoque-api/webpack.config.js"
       }
     },
     "prune-lockfile": {
@@ -44,20 +39,21 @@
       "executor": "nx:noop"
     },
     "serve": {
-      "continuous": true,
       "executor": "@nx/js:node",
       "defaultConfiguration": "development",
-      "dependsOn": ["build"],
       "options": {
         "buildTarget": "evoque-api:build",
-        "runBuildTargetDependencies": false
+        "watch": false,
+        "inspect": false
       },
       "configurations": {
         "development": {
-          "buildTarget": "evoque-api:build:development"
+          "buildTarget": "evoque-api:build:development",
+          "watch": false
         },
         "production": {
-          "buildTarget": "evoque-api:build:production"
+          "buildTarget": "evoque-api:build:production",
+          "watch": false
         }
       }
     },

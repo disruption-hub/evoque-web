@@ -1,0 +1,13 @@
+{
+  "$schema": "https://railway.app/railway.schema.json",
+  "build": {
+    "builder": "NIXPACKS",
+    "buildCommand": "npm ci && npx nx build evoque-api && (cd dist/apps/evoque-api && npm ci --production || true)"
+  },
+  "deploy": {
+    "startCommand": "cd dist/apps/evoque-api && node main.js",
+    "restartPolicyType": "ON_FAILURE",
+    "restartPolicyMaxRetries": 10
+  }
+}
+
