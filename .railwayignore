@@ -1,3 +1,4 @@
+# Standard ignores
 node_modules
 .git
 .github
@@ -5,5 +6,25 @@ node_modules
 .DS_Store
 coverage
 .nyc_output
-dist/apps/evoque-api-e2e
 
+# E2E tests (don't trigger deployments)
+dist/apps/evoque-api-e2e
+apps/evoque-api-e2e/**
+
+# Web app (separate service)
+apps/evoque-web/**
+
+# Web app E2E tests
+apps/evoque-web-e2e/**
+
+# WebSocket app (separate service at monorepo root)
+../apps/websocket/**
+
+# WebSocket app (old location if still exists)
+apps/websocket/**
+
+# Root level apps (if any)
+../apps/**
+
+# Only watch evoque-api related files
+# This service should only deploy when evoque-api changes
