@@ -5,6 +5,5 @@
   "framework": "nextjs",
   "env": {
     "NODE_ENV": "production"
-  },
-  "ignoreCommand": false
+  }
 }
