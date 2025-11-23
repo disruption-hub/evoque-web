@@ -1,0 +1,371 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id                          String                @id @default(cuid())
+  email                       String                @unique
+  password                    String
+  firstName                   String
+  lastName                    String
+  phone                       String?
+  dateOfBirth                 DateTime?
+  profileImage                String?
+  isActive                    Boolean               @default(true)
+  emailVerified               Boolean               @default(false)
+  emailVerifiedAt             DateTime?
+  lastLoginAt                 DateTime?
+  createdAt                   DateTime              @default(now())
+  updatedAt                   DateTime              @updatedAt
+  roleId                      String
+  auditLogs                   AuditLog[]
+  awsConfigurationsCreated    AwsConfiguration[]    @relation("AwsConfigurationCreatedBy")
+  awsConfigurationsUpdated    AwsConfiguration[]    @relation("AwsConfigurationUpdatedBy")
+  resendConfigurationsCreated ResendConfiguration[] @relation("ResendConfigurationCreatedBy")
+  resendConfigurationsUpdated ResendConfiguration[] @relation("ResendConfigurationUpdatedBy")
+  forms                       Form[]
+  mediaFiles                  MediaFile[]
+  createdNotifications        Notification[]        @relation("NotificationCreatedBy")
+  notifications               Notification[]
+  pageTemplates               PageTemplate[]
+  pagesCreated                Page[]                @relation("PageCreatedBy")
+  pagesUpdated                Page[]                @relation("PageUpdatedBy")
+  pagesDeleted                Page[]                @relation("PageDeletedBy")
+  sessions                    Session[]
+  configurations              UserConfiguration[]
+  role                        Role                  @relation(fields: [roleId], references: [id])
+
+  @@map("users")
+}
+
+model Role {
+  id              String           @id @default(cuid())
+  name            String           @unique
+  description     String?
+  isActive        Boolean          @default(true)
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+  rolePermissions RolePermission[]
+  users           User[]
+
+  @@map("roles")
+}
+
+model Permission {
+  id              String           @id @default(cuid())
+  name            String           @unique
+  resource        String
+  action          String
+  description     String?
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+  rolePermissions RolePermission[]
+
+  @@unique([resource, action])
+  @@map("permissions")
+}
+
+model RolePermission {
+  id           String     @id @default(cuid())
+  roleId       String
+  permissionId String
+  createdAt    DateTime   @default(now())
+  permission   Permission @relation(fields: [permissionId], references: [id], onDelete: Cascade)
+  role         Role       @relation(fields: [roleId], references: [id], onDelete: Cascade)
+
+  @@unique([roleId, permissionId])
+  @@map("role_permissions")
+}
+
+model UserConfiguration {
+  id        String   @id @default(cuid())
+  userId    String
+  key       String
+  value     String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, key])
+  @@map("user_configurations")
+}
+
+model Session {
+  id             String   @id @default(cuid())
+  userId         String
+  token          String   @unique
+  expiresAt      DateTime
+  ipAddress      String?
+  userAgent      String?
+  deviceInfo     String?
+  lastActivityAt DateTime @default(now())
+  isActive       Boolean  @default(true)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+  user           User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("sessions")
+}
+
+model Notification {
+  id          String               @id @default(cuid())
+  userId      String
+  type        NotificationType
+  title       String
+  message     String
+  isRead      Boolean              @default(false)
+  data        Json?
+  createdAt   DateTime             @default(now())
+  updatedAt   DateTime             @updatedAt
+  actionUrl   String?
+  createdById String?
+  expiresAt   DateTime?
+  isBroadcast Boolean              @default(false)
+  priority    NotificationPriority @default(NORMAL)
+  createdBy   User?                @relation("NotificationCreatedBy", fields: [createdById], references: [id])
+  user        User                 @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("notifications")
+}
+
+model AuditLog {
+  id         String   @id @default(cuid())
+  userId     String?
+  action     String
+  resource   String
+  resourceId String?
+  oldData    Json?
+  newData    Json?
+  ipAddress  String?
+  userAgent  String?
+  createdAt  DateTime @default(now())
+  user       User?    @relation(fields: [userId], references: [id])
+
+  @@map("audit_logs")
+}
+
+model Form {
+  id             String           @id @default(cuid())
+  name           String
+  slug           String
+  description    String?
+  isActive       Boolean          @default(true)
+  settings       Json?
+  createdAt      DateTime         @default(now())
+  updatedAt      DateTime         @updatedAt
+  createdById    String
+  locale         String           @default("en")
+  fields         FormField[]
+  pageVisibility FormPage[]
+  submissions    FormSubmission[]
+  createdBy      User             @relation(fields: [createdById], references: [id])
+
+  @@unique([slug, locale])
+  @@map("forms")
+}
+
+model FormField {
+  id          String        @id @default(cuid())
+  formId      String
+  name        String
+  label       String
+  type        FormFieldType
+  placeholder String?
+  required    Boolean       @default(false)
+  options     Json?
+  validation  Json?
+  order       Int           @default(0)
+  isActive    Boolean       @default(true)
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+  form        Form          @relation(fields: [formId], references: [id], onDelete: Cascade)
+
+  @@map("form_fields")
+}
+
+model FormSubmission {
+  id        String   @id @default(cuid())
+  formId    String
+  data      Json
+  ipAddress String?
+  userAgent String?
+  status    String   @default("new")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  form      Form     @relation(fields: [formId], references: [id], onDelete: Cascade)
+
+  @@map("form_submissions")
+}
+
+model FormPage {
+  id        String   @id @default(cuid())
+  formId    String
+  pageId    String
+  isVisible Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  form      Form     @relation(fields: [formId], references: [id], onDelete: Cascade)
+  page      Page     @relation(fields: [pageId], references: [id], onDelete: Cascade)
+
+  @@unique([formId, pageId])
+  @@map("form_pages")
+}
+
+model PageTemplate {
+  id          String   @id @default(cuid())
+  name        String   @unique
+  slug        String   @unique
+  description String?
+  category    String?
+  template    Json
+  preview     String?
+  isActive    Boolean  @default(true)
+  isPublic    Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  createdById String
+  createdBy   User     @relation(fields: [createdById], references: [id])
+
+  @@map("page_templates")
+}
+
+model Page {
+  id             String     @id @default(cuid())
+  title          String
+  slug           String
+  content        String     @default("")
+  status         String     @default("draft")
+  locale         String     @default("en")
+  seoTitle       String?
+  seoDescription String?
+  template       Json?
+  renderSettings Json? // Page-level render settings
+  createdAt      DateTime   @default(now())
+  updatedAt      DateTime   @updatedAt
+  createdById    String?
+  updatedById    String?
+  deletedById    String?
+  deletedAt      DateTime?
+  createdBy      User?      @relation("PageCreatedBy", fields: [createdById], references: [id])
+  updatedBy      User?      @relation("PageUpdatedBy", fields: [updatedById], references: [id])
+  deletedBy      User?      @relation("PageDeletedBy", fields: [deletedById], references: [id])
+  formPages      FormPage[]
+
+  @@unique([slug, locale])
+  @@map("pages")
+}
+
+model MediaFile {
+  id           String   @id @default(cuid())
+  title        String
+  fileName     String
+  fileUrl      String
+  s3Key        String   @unique
+  fileSize     BigInt
+  fileType     String
+  folder       String?  @default("")
+  altText      String?
+  description  String?
+  isPublic     Boolean  @default(true)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  uploadedById String
+  uploadedBy   User     @relation(fields: [uploadedById], references: [id])
+
+  @@index([folder])
+  @@index([fileType])
+  @@index([createdAt])
+  @@map("media_files")
+}
+
+model AwsConfiguration {
+  id                String   @id @default(cuid())
+  region            String   @default("us-east-1")
+  bucketName        String
+  accessKeyId       String
+  secretAccessKey   String
+  urlPrefix         String?
+  isActive          Boolean  @default(true)
+  maxFileSize       BigInt   @default(52428800)
+  allowedFileTypes  String[] @default(["image/*", "video/*", "application/pdf", "text/*"])
+  folderStructure   String   @default("uploads")
+  enableCdn         Boolean  @default(false)
+  cdnUrl            String?
+  enableEncryption  Boolean  @default(false)
+  encryptionKey     String?
+  corsEnabled       Boolean  @default(true)
+  corsOrigins       String[] @default(["*"])
+  versioningEnabled Boolean  @default(true)
+  lifecyclePolicy   Json?
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+  createdById       String
+  updatedById       String?
+  public            Boolean  @default(false)
+  createdBy         User     @relation("AwsConfigurationCreatedBy", fields: [createdById], references: [id])
+  updatedBy         User?    @relation("AwsConfigurationUpdatedBy", fields: [updatedById], references: [id])
+
+  @@map("aws_configurations")
+}
+
+model ResendConfiguration {
+  id               String   @id @default(cuid())
+  apiKey           String
+  fromEmail        String
+  fromName         String?
+  replyToEmail     String?
+  replyToName      String?
+  isActive         Boolean  @default(true)
+  webhookSecret    String?
+  webhookUrl       String?
+  enableWebhooks   Boolean  @default(false)
+  defaultDomain    String?
+  testMode         Boolean  @default(false)
+  rateLimitEnabled Boolean  @default(true)
+  rateLimitPerDay  Int      @default(1000)
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+  createdById      String
+  updatedById      String?
+  createdBy        User     @relation("ResendConfigurationCreatedBy", fields: [createdById], references: [id])
+  updatedBy        User?    @relation("ResendConfigurationUpdatedBy", fields: [updatedById], references: [id])
+
+  @@map("resend_configurations")
+}
+
+enum NotificationType {
+  INFO
+  WARNING
+  ERROR
+  SUCCESS
+  SYSTEM
+}
+
+enum NotificationPriority {
+  LOW
+  NORMAL
+  HIGH
+  URGENT
+}
+
+enum FormFieldType {
+  TEXT
+  EMAIL
+  PHONE
+  TEXTAREA
+  SELECT
+  RADIO
+  CHECKBOX
+  NUMBER
+  DATE
+  TIME
+  URL
+  PASSWORD
+  FILE
+}
+

@@ -46,3 +46,10 @@ Thumbs.db
 # Next.js
 .next
 out
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+/generated/prisma
