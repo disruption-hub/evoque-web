@@ -10,15 +10,23 @@ COPY package*.json ./
 COPY nx.json ./
 COPY tsconfig.base.json ./
 
-# Install dependencies
+# Install root dependencies
 RUN npm ci
+
+# Install evoque-api workspace dependencies (needed for Nx plugins like @nx/playwright)
+WORKDIR /app/evoque-api
+COPY evoque-api/package*.json ./
+COPY evoque-api/nx.json ./
+# Install dependencies - use install if package-lock.json doesn't exist
+RUN if [ -f package-lock.json ]; then npm ci --legacy-peer-deps; else npm install --legacy-peer-deps; fi
 
 # Build the application
 FROM base AS builder
 WORKDIR /app
 
-# Copy dependencies from deps stage
+# Copy dependencies from deps stage (both root and evoque-api)
 COPY --from=deps /app/node_modules ./node_modules
+COPY --from=deps /app/evoque-api/node_modules ./evoque-api/node_modules
 COPY . .
 
 # Generate Prisma Client before build
@@ -30,9 +38,8 @@ RUN DATABASE_URL="postgresql://dummy:dummy@localhost:5432/dummy" npx prisma gene
 
 # Build the NestJS websocket application
 # Need to build from evoque-api workspace, not root workspace
-# Create symlink so Nx can resolve plugins from root node_modules
+# Nx plugins are now available in evoque-api/node_modules
 WORKDIR /app/evoque-api
-RUN ln -s /app/node_modules ./node_modules || true
 RUN npx nx build websocket
 
 # Production image
