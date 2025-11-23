@@ -88,8 +88,9 @@ COPY --from=builder /app/evoque-api/generated ./evoque-api/generated
 COPY --from=builder /app/evoque-api/dist/apps/websocket ./dist/apps/websocket
 
 # Install production dependencies from the built package.json
+# Use --legacy-peer-deps to handle peer dependency conflicts (e.g., @nestjs/config@3.x with NestJS 11)
 WORKDIR /app/dist/apps/websocket
-RUN npm install --omit=dev
+RUN npm install --omit=dev --legacy-peer-deps
 
 # Go back to app root
 WORKDIR /app
