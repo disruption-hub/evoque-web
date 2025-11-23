@@ -20,6 +20,23 @@ COPY evoque-api/nx.json ./
 # Install dependencies - use install if package-lock.json doesn't exist
 RUN if [ -f package-lock.json ]; then npm ci --legacy-peer-deps; else npm install --legacy-peer-deps; fi
 
+# Install websocket app dependencies (they're in websocket's package.json but need to be in evoque-api node_modules for the build)
+# These are required by the websocket app but not in evoque-api's package.json
+WORKDIR /app/evoque-api
+RUN npm install --legacy-peer-deps --no-save \
+    @nestjs/config@^3.1.1 \
+    @nestjs/jwt@^10.2.0 \
+    @nestjs/passport@^10.0.3 \
+    passport@^0.7.0 \
+    passport-jwt@^4.0.1 \
+    pusher@^5.2.0 \
+    cookie-parser@^1.4.7 \
+    express@^4.18.2 \
+    yn@^3.1.1 \
+    reflect-metadata@^0.1.14 \
+    rxjs@^7.8.1 \
+    tsconfig-paths@^4.2.0
+
 # Build the application
 FROM base AS builder
 WORKDIR /app
