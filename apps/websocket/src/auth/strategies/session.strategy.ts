@@ -14,7 +14,8 @@ class SessionTokenStrategy extends Strategy {
   authenticate(req: Request): void {
     const authHeader = req.headers.authorization;
     if (!authHeader || !authHeader.startsWith('Bearer ')) {
-      return this.fail(new UnauthorizedException('Token not provided'), 401);
+      // Passport's fail method takes (challenge?: string | number, status?: number)
+      return (this as any).fail('Token not provided', 401);
     }
 
     const token = authHeader.substring(7);
@@ -23,10 +24,13 @@ class SessionTokenStrategy extends Strategy {
     this.authService
       .validateToken(token)
       .then((user) => {
-        this.success(user);
+        // Passport's success method takes (user: any, info?: any)
+        (this as any).success(user);
       })
       .catch((error) => {
-        this.fail(error, 401);
+        // Passport's fail method takes (challenge?: string | number, status?: number)
+        const message = error?.message || 'Authentication failed';
+        (this as any).fail(message, 401);
       });
   }
 }

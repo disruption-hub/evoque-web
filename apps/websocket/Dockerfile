@@ -22,6 +22,7 @@ RUN if [ -f package-lock.json ]; then npm ci --legacy-peer-deps; else npm instal
 
 # Install websocket app dependencies (they're in websocket's package.json but need to be in evoque-api node_modules for the build)
 # These are required by the websocket app but not in evoque-api's package.json
+# Note: Using NestJS 11 versions to match evoque-api's package.json
 WORKDIR /app/evoque-api
 RUN npm install --legacy-peer-deps --no-save \
     @nestjs/config@^3.1.1 \
