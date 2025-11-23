@@ -1,0 +1,29 @@
+# Standard ignores
+node_modules
+.git
+.github
+*.log
+.DS_Store
+coverage
+.nyc_output
+
+# Evoque API main app (separate service)
+../evoque-api/apps/evoque-api/**
+
+# Evoque API E2E tests
+../evoque-api/apps/evoque-api-e2e/**
+
+# Web app (separate service)
+../evoque-api/apps/evoque-web/**
+
+# Web app E2E tests
+../evoque-api/apps/evoque-web-e2e/**
+
+# Web app at root (if exists)
+../apps/evoque-web/**
+
+# Only watch websocket related files
+# This service should only deploy when websocket changes
+# Note: We keep evoque-api/prisma/** and evoque-api/generated/** 
+# as they are needed for the build
+
