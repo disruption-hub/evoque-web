@@ -1,4 +1,4 @@
-import { Permission } from '../../../../generated/prisma';
+import { Permission } from '@prisma/client';
 
 export class PermissionEntity implements Permission {
   id: string;

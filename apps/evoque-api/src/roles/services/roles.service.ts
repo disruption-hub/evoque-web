@@ -7,7 +7,7 @@ import {
 import { RolesRepository } from '../repositories/roles.repository';
 import { CreateRoleDto } from '../dto/create-role.dto';
 import { UpdateRoleDto } from '../dto/update-role.dto';
-import { Role } from '../../../../generated/prisma';
+import { Role } from '@prisma/client';
 
 @Injectable()
 export class RolesService {

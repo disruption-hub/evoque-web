@@ -6,7 +6,7 @@ import {
 import { PermissionsRepository } from '../repositories/permissions.repository';
 import { CreatePermissionDto } from '../dto/create-permission.dto';
 import { UpdatePermissionDto } from '../dto/update-permission.dto';
-import { Permission } from '../../../../generated/prisma';
+import { Permission } from '@prisma/client';
 
 @Injectable()
 export class PermissionsService {

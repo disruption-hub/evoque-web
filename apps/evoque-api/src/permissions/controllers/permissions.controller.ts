@@ -13,7 +13,7 @@ import {
 import { PermissionsService } from '../services/permissions.service';
 import { CreatePermissionDto } from '../dto/create-permission.dto';
 import { UpdatePermissionDto } from '../dto/update-permission.dto';
-import { Permission } from '../../../../generated/prisma';
+import { Permission } from '@prisma/client';
 
 @Controller('permissions')
 export class PermissionsController {
