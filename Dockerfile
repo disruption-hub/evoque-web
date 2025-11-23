@@ -10,14 +10,14 @@ COPY package*.json ./
 COPY nx.json ./
 COPY tsconfig.base.json ./
 
-# Install dependencies
+# Install dependencies (updated to use prisma 7)
 RUN npm ci
 
 # Build the application
 FROM base AS builder
 WORKDIR /app
 
-# Copy dependencies from deps stage
+# Copy dependencies from deps stage 
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
