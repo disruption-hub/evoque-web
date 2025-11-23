@@ -17,8 +17,9 @@ RUN npm ci
 WORKDIR /app/evoque-api
 COPY evoque-api/package*.json ./
 COPY evoque-api/nx.json ./
-# Install dependencies - use install if package-lock.json doesn't exist
-RUN if [ -f package-lock.json ]; then npm ci --legacy-peer-deps; else npm install --legacy-peer-deps; fi
+# Install dependencies - use install to allow for dynamic dependency additions
+# npm ci requires exact lock file match, which fails when dependencies are added to package.json
+RUN npm install --legacy-peer-deps
 
 # Install websocket app dependencies (they're in websocket's package.json but need to be in evoque-api node_modules for the build)
 # These are required by the websocket app but not in evoque-api's package.json
