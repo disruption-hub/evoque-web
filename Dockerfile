@@ -21,8 +21,8 @@ WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-# Build the NestJS application and generate package files
-RUN npx nx build evoque-api && npx nx run evoque-api:prune-lockfile
+# Build the NestJS application
+RUN npx nx build evoque-api
 
 # Production image
 FROM base AS runner
@@ -35,7 +35,7 @@ COPY --from=builder /app/dist/apps/evoque-api ./dist/apps/evoque-api
 
 # Install production dependencies from the built package.json
 WORKDIR /app/dist/apps/evoque-api
-RUN npm ci --omit=dev
+RUN npm install --omit=dev
 
 # Go back to app root
 WORKDIR /app
