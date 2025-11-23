@@ -1,5 +1,10 @@
 'use client';
 
+// Force dynamic rendering to avoid build-time Prisma issues
+export const dynamic = 'force-dynamic';
+export const dynamicParams = true;
+export const revalidate = 0;
+
 import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import { Image, Upload, Trash2, Eye, Folder, LayoutGrid, List, Cloud, CheckCircle, ArrowRight, ExternalLink, RefreshCw, MoreVertical, Move, X, AlertTriangle, Loader2 } from 'lucide-react';
