@@ -35,6 +35,22 @@ WORKDIR /app
 
 ENV NODE_ENV=production
 
+# Copy package.json to install Prisma dependencies at root
+COPY --from=builder /app/package.json ./package.json
+COPY --from=builder /app/package-lock.json ./package-lock.json
+
+# Install Prisma runtime dependencies at root level
+# These are needed because the generated Prisma Client at /app/generated/prisma requires them
+# Node.js will resolve these from /app/node_modules when the generated client requires them
+RUN npm install --omit=dev --no-save \
+    @prisma/client@^7.0.0 \
+    @prisma/client-runtime-utils@7.0.0 \
+    @prisma/adapter-pg@^7.0.0 \
+    pg@^8.16.3
+
+# Copy generated Prisma client (needed at runtime)
+COPY --from=builder /app/generated ./generated
+
 # Copy built application
 COPY --from=builder /app/dist/apps/evoque-api ./dist/apps/evoque-api
 
